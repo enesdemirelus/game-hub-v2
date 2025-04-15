@@ -1,4 +1,5 @@
-import { Grid, GridItem, Show } from "@chakra-ui/react";
+import { Grid, GridItem } from "@chakra-ui/react";
+import NavBar from "./my_components/NavBar";
 
 // Creating a grid with responsive layout.
 const App = () => {
@@ -11,8 +12,8 @@ const App = () => {
           lg: '"nav nav" "aside main"',
         }}
       >
-        <GridItem area="nav" bg="coral">
-          Nav
+        <GridItem area="nav">
+          <NavBar></NavBar>
         </GridItem>
         <GridItem
           area="aside"
