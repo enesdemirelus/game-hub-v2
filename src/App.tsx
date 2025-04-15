@@ -1,8 +1,10 @@
 import { Grid, GridItem } from "@chakra-ui/react";
 import NavBar from "./my_components/NavBar";
+import { useColorMode } from "./components/ui/color-mode";
 
 // Creating a grid with responsive layout.
 const App = () => {
+  const { toggleColorMode } = useColorMode();
   return (
     <>
       <Grid
