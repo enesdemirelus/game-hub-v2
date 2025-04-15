@@ -1,10 +1,9 @@
 import { Grid, GridItem } from "@chakra-ui/react";
 import NavBar from "./my_components/NavBar";
-import { useColorMode } from "./components/ui/color-mode";
+import GameGrid from "./my_components/GameGrid";
 
 // Creating a grid with responsive layout.
 const App = () => {
-  const { toggleColorMode } = useColorMode();
   return (
     <>
       <Grid
@@ -19,13 +18,12 @@ const App = () => {
         </GridItem>
         <GridItem
           area="aside"
-          bg="gold"
           display={{ base: "none", lg: "block" }} // making sure aside does not render when screen is large.
         >
           Aside
         </GridItem>
-        <GridItem area="main" bg="dodgerblue">
-          Main
+        <GridItem area="main">
+          <GameGrid></GameGrid>
         </GridItem>
       </Grid>
     </>
